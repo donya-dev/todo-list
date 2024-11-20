@@ -1,0 +1,220 @@
+$font-family-josefin-sans: "Josefin Sans", sans-serif;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+$font-size-mobile: 10px;
+$font-size-tablet: 16px;
+$font-size-desktop: 18px;
+$font-name-logo-todo-size: 40px;
+$padding-mobile: 10px;
+$padding-tablet: 20px;
+$padding-desktop: 30px;
+$completed-color: hsl(233, 11%, 84%);
+
+$primary-background-color: #161620;
+
+$logo-font-color: #fdfffd;
+
+$primary-font-color-add: hsl(233, 14%, 35%);
+$hover-color: hsl(236, 33%, 92%);
+
+$list-background-color: #25273c;
+
+body {
+  font-size: $font-size-mobile;
+  padding: $padding-mobile;
+  background-color: $primary-background-color;
+}
+
+#image-bg {
+  background-image: url(images/bg-mobile-dark.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 2px;
+}
+
+.logo-mode {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 475px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#name-todo {
+  font-size: $font-name-logo-todo-size;
+  font-family: $font-family-josefin-sans;
+  font-weight: $font-weight-regular;
+  color: $logo-font-color;
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.add-todo {
+  background-color: hsl(233, 24%, 19%);
+  display: flex;
+  height: 70px;
+  border-radius: 6px;
+  margin: 0 auto;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.check {
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-done {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid hsl(233, 14%, 35%);
+  cursor: pointer;
+  transition: all 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.check-completed {
+  background-image: url(images/cheked.png);
+  background-position: center;
+  background-size: 58px;
+}
+
+.add-todo-input form {
+  flex-grow: 1;
+}
+
+.add-todo-input {
+  flex-grow: 1;
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: aliceblue;
+  width: 560px;
+}
+
+input {
+  padding: 10px 0px;
+}
+
+input::placeholder {
+  font-size: 18px;
+  font-family: $font-family-josefin-sans;
+  font-weight: $font-weight-regular;
+  color: $primary-font-color-add;
+  text-align: start;
+  align-self: center;
+}
+
+.todo-item {
+  width: 100%;
+  height: 80px;
+  color: hsl(234, 39%, 85%);
+  font-size: 15px;
+  display: flex;
+  cursor: pointer;
+}
+
+.todo-text {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.container-list {
+  display: flex;
+  background-color: hsl(233, 24%, 19%);
+  border-radius: 6px;
+  box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.4);
+  margin-top: 3%;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  flex-wrap: wrap;
+  width: 650px;
+}
+
+.line-through {
+  text-decoration: line-through;
+  color: $completed-color; // Lightens the color of the text when completed
+}
+
+.todo-items-info {
+  height: 70px;
+  width: 650px;
+  color: hsl(233, 14%, 35%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  background-color: hsl(233, 24%, 19%);
+}
+
+.item-statuses {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.item-statuses span {
+  cursor: pointer;
+  transition: color 0.3s ease; // Smooth color transition on hover
+}
+
+.item-statuses span:hover,
+.item-statuses .active {
+  color: hsl(220, 98%, 61%);
+}
+
+.items-clear {
+  cursor: pointer;
+  text-align: end;
+}
+
+.items-clear span:hover {
+  color: hsl(233, 6%, 51%);
+}
+
+// Tablet breakpoint
+//768px
+@media (min-width: 568px) {
+  body {
+    font-size: $font-size-tablet;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .add-todo {
+    max-width: 650px;
+  }
+
+  .logo-mode {
+    max-width: 650px;
+  }
+
+  .container-list {
+    max-width: 650px;
+  }
+}
+
+// Desktop breakpoint
+@media (min-width: 1024px) {
+  body {
+    font-size: $font-size-desktop;
+    background-size: cover;
+    background-position: center;
+  }
+  .logo-mode {
+    max-width: 650px;
+  }
+}
